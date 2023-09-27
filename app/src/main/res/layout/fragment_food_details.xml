@@ -9,22 +9,29 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         tools:ignore="MissingConstraints">
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="242dp"
-            android:paddingHorizontal="16dp"
-            android:paddingVertical="12dp"
-            android:orientation="vertical"
-            android:background="@drawable/background_hero">
-
+            android:orientation="vertical">
             <ImageView
-                android:id="@+id/backIcon"
-                android:layout_width="28dp"
-                android:layout_height="28dp"
-                android:contentDescription="@string/app_name"
-                android:clickable="true"
-                android:onClick="backOnClick"/>
-        </LinearLayout>
+                android:id="@+id/backgroundHero"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:scaleType="fitXY"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginVertical="12dp">
+                <ImageView
+                    android:id="@+id/backIcon"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:contentDescription="@string/app_name"
+                    android:clickable="true"/>
+            </LinearLayout>
+        </RelativeLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -37,17 +44,17 @@
                 android:orientation="horizontal"
                 android:gravity="center">
                 <TextView
+                    android:id = "@+id/foodName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Pizza Sosis"
                     android:textSize="18sp"
                     android:textStyle="bold"/>
                 <TextView
+                    android:id = "@+id/foodPrice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Rp 28.000"
                     android:textSize="15sp"
                     android:textStyle="bold"
                     android:textAlignment="textEnd"/>
@@ -58,6 +65,7 @@
                 android:orientation="vertical"
                 android:layout_marginVertical="4dp">
                 <TextView
+                    android:id = "@+id/foodDesc"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -97,13 +105,11 @@
                         android:textSize="18sp"
                         android:textStyle="bold"/>
                     <TextView
-                        android:id="@+id/locationTextView"
+                        android:id="@+id/foodLocation"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:layout_marginTop="4dp"
-                        android:text="Jl. BSD Green Office Park Jl. BSD Grand Boulevard, Sampora, BSD, Kabupaten Tangerang, Banten 15345"
-                        android:clickable="true"/>
+                        android:layout_marginTop="4dp"/>
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
@@ -150,10 +156,10 @@
                     android:textColor="@color/white" />
             </LinearLayout>
             <Button
+                android:id = "@+id/foodButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                android:text="Tambahkan ke Keranjang - 28.000"
                 android:textColor="@color/white" />
         </LinearLayout>
     </LinearLayout>

@@ -219,7 +219,7 @@
                 android:gravity="center"
                 android:layout_marginBottom="14dp">
                 <TextView
-                    android:layout_width="315dp"
+                    android:layout_width="292dp"
                     android:layout_height="match_parent"
                     android:text="List Makanan"
                     android:textSize="16dp"
@@ -228,8 +228,15 @@
                     android:id="@+id/listIcon"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:layout_marginEnd="8dp"
-                    android:contentDescription="@string/app_name"/>
+                    android:contentDescription="@string/app_name"
+                    android:clickable="true"/>
+                <ImageView
+                    android:id="@+id/galleryIcon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="16dp"
+                    android:contentDescription="@string/app_name"
+                    android:clickable="true"/>
             </LinearLayout>
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerView"

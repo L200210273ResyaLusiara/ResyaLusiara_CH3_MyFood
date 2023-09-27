@@ -39,7 +39,9 @@ android {
 }
 
 dependencies {
-    implementation ("androidx.recyclerview:recyclerview:1.2.0")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.3.1")
+    implementation("androidx.navigation:navigation-ui-ktx:2.3.1")
+    implementation("androidx.recyclerview:recyclerview:1.2.0")
     implementation("io.coil-kt:coil:2.4.0")
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")

@@ -9,6 +9,8 @@ import androidx.recyclerview.widget.RecyclerView
 import coil.load
 
 class FoodListsAdapter(private val foodLists: List<FoodItems>) : RecyclerView.Adapter<FoodListsAdapter.ViewHolder>() {
+    private var onItemClickListener: ((FoodItems) -> Unit)? = null
+
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val nameView: TextView
         val priceView: TextView
@@ -28,8 +30,15 @@ class FoodListsAdapter(private val foodLists: List<FoodItems>) : RecyclerView.Ad
         holder.nameView.text = foodItem.name
         holder.priceView.text = foodItem.price
         holder.imageView.load(foodItem.image)
+        holder.itemView.setOnClickListener {
+            onItemClickListener?.invoke(foodItem)
+        }
     }
     override fun getItemCount(): Int {
         return foodItems.size
+    }
+
+    fun setOnItemClickListener(listener: (FoodItems) -> Unit) {
+        onItemClickListener = listener
     }
 }
